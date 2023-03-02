@@ -1,0 +1,136 @@
+* {
+    box-sizing: border-box;
+    cursor: default;
+    font-family: Arial, sans-serif;
+    margin: .5em;
+    user-select: none;
+}
+
+a {
+    color: blue;
+    cursor: pointer;
+    margin: 0;
+    padding-left: .5em;
+}
+
+a:active {
+    color: red;
+}
+
+button {
+    background: peru;
+    border: none;
+    border-radius: .5em;
+    cursor: pointer;
+    font-size: 2em;
+    margin: 0;
+    padding: 0 .5em;
+}
+
+button:active {
+    color: white;
+    opacity: .8;
+}
+
+div {
+    margin: 0;
+}
+
+form {
+    background: #ddd;
+    margin: 1em 0;
+    padding: .5em 0 .5em 2em;
+}
+
+h2 {
+    display: inline-block;
+    font-size: 2em;
+}
+
+input {
+    border: 1px solid black;
+    border-radius: .25em;
+    cursor: text;
+    font-size: 1.25em;
+    margin: 0;
+    padding: 0 .5em;
+    width: 500px;
+}
+
+input[type="submit"] {
+    background: black;
+    border-radius: .5em;
+    color: white;
+    cursor: pointer;
+    font-size: 1.25em;
+    width: 400px;
+}
+
+input[type="submit"]:active {
+    opacity: .5;
+}
+
+input:invalid {
+    border-color: crimson;
+}
+
+label {
+    font-size: 1.25em;
+    line-height: 2em;
+    margin: 0;
+}
+
+label::before {
+    content: '\a';
+    white-space: pre;
+}
+
+ol {
+    line-height: 2em;
+    white-space: nowrap;
+}
+
+section {
+    margin: 0;
+}
+
+span {
+    display: inline-block;
+    line-height: 2em;
+    margin: 0;
+    padding-left: 2em;
+    user-select: text;
+}
+
+table {
+    border-collapse: collapse;
+    line-height: 2em;
+}
+
+td {
+    user-select: text;
+}
+
+th {
+    padding: 0 2em;
+    text-align: left;
+    width: 6em;
+}
+
+.header-group {
+    background: #bbb;
+    border: 1px solid black;
+    margin-top: 1em;
+}
+
+@media (max-width: 500px) {
+
+    body {
+        display: none;
+    }
+
+    html {
+        background: black;
+    }
+
+}

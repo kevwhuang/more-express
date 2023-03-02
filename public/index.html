@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+
+<html lang="en-US" dir="ltr">
+
+<head>
+
+    <title>More Express</title>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Kevin Huang">
+    <meta name="robots" content="index, follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/utilities.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js/styles.js" defer></script>
+    <script src="js/buttons.js" defer></script>
+    <script src="js/axios.js" defer></script>
+    <script src="js/main.js" defer></script>
+
+</head>
+
+<body>
+
+    <section>
+
+        <div class="header-group">
+            <h2>COMMENTS</h2>
+            <button onclick="toggleComments()">view</button>
+        </div>
+
+        <div id="listComments" class="">
+            <form id="formComments" action="" target="_self" method="post" enctype="application/x-www-form-urlencoded">
+                <input type="submit" value="Create">
+
+                <label for="commentsBody">Body:</label>
+                <input id="commentsBody" type="text" name="body">
+            </form>
+
+            <div id="displayComments"></div>
+        </div>
+
+    </section>
+
+    <section>
+
+        <div class="header-group">
+            <h2>CONTACTS</h2>
+            <button onclick="toggleContacts()">view</button>
+        </div>
+
+        <div id="listContacts" class="">
+            <form id="formContacts" action="" target="_self" method="post" enctype="application/x-www-form-urlencoded">
+                <input type="submit" value="Create">
+
+                <label for="contactsName">Name:</label>
+                <input id="contactsName" type="text" name="name">
+
+                <label for="contactsOccupation">Occupation:</label>
+                <input id="contactsOccupation" type="text" name="occupation">
+
+                <label for="contactsAvatar">Avatar:</label>
+                <input id="contactsAvatar" type="text" name="avatar">
+            </form>
+
+            <div id="displayContacts"></div>
+        </div>
+
+    </section>
+
+    <section>
+
+        <div class="header-group">
+            <h2>PRODUCTS</h2>
+            <button onclick="toggleProducts()">view</button>
+        </div>
+
+        <div id="listProducts" class="">
+            <form id="formProducts" action="" target="_self" method="post" enctype="application/x-www-form-urlencoded">
+                <input type="submit" value="Create">
+
+                <label for="productsName">Name:</label>
+                <input id="productsName" type="text" name="name">
+
+                <label for="productsDescription">Description:</label>
+                <input id="productsDescription" type="text" name="description">
+
+                <label for="productsRating">Rating:</label>
+                <input id="productsRating" type="text" name="rating" placeholder="#" pattern="[0-9]">
+
+                <label for="productsImgUrl">Image URL:</label>
+                <input id="productsImgUrl" type="text" name="imgUrl">
+
+                <label for="productsPrice">Price:</label>
+                <input id="productsPrice" type="text" name="price">
+
+                <label for="productsCategory">Category:</label>
+                <input id="productsCategory" type="text" name="category">
+            </form>
+
+            <div id="displayProducts"></div>
+        </div>
+
+    </section>
+
+    <section>
+
+        <div class="header-group">
+            <h2>VEHICLES</h2>
+            <button onclick="toggleVehicles()">view</button>
+        </div>
+
+        <div id="listVehicles" class="">
+            <form id="formVehicles" action="" target="_self" method="post" enctype="application/x-www-form-urlencoded">
+                <input type="submit" value="Create">
+
+                <label for="vehiclesImgUrl">Image URL:</label>
+                <input id="vehiclesImgUrl" type="text" name="imgUrl">
+
+                <label for="vehiclesYear">Year:</label>
+                <input id="vehiclesYear" type="text" name="year" placeholder="####" pattern="[0-5]{4}">
+
+                <label for="vehiclesMake">Make:</label>
+                <input id="vehiclesMake" type="text" name="make">
+
+                <label for="vehiclesModel">Model:</label>
+                <input id="vehiclesModel" type="text" name="nodel">
+
+                <label for="vehiclesPrice">Price:</label>
+                <input id="vehiclesPrice" type="text" name="price">
+
+                <label for="vehiclesKm">Kilometers:</label>
+                <input id="vehiclesKm" type="text" name="km" placeholder="#+" pattern="[0-9]+">
+
+                <label for="vehiclesMiles">Miles:</label>
+                <input id="vehiclesMiles" type="text" name="miles" placeholder="#+" pattern="[0-9]+">
+
+                <label for="vehiclesFuel">Fuel:</label>
+                <input id="vehiclesFuel" type="text" name="fuel">
+
+                <label for="vehiclesCity">City:</label>
+                <input id="vehiclesCity" type="text" name="city">
+            </form>
+
+            <div id="displayVehicles"></div>
+        </div>
+
+    </section>
+
+    <section>
+
+        <div class="header-group">
+            <h2>ROUTES</h2>
+            <button onclick="toggleRoutes()">view</button>
+        </div>
+
+        <table class="">
+            <tbody>
+                <tr>
+                    <th>GET</th>
+                    <td>/comments</td>
+                </tr>
+
+                <tr>
+                    <th>GET</th>
+                    <td>/contacts</td>
+                </tr>
+
+                <tr>
+                    <th>GET</th>
+                    <td>/products</td>
+                </tr>
+
+                <tr>
+                    <th>GET</th>
+                    <td>/vehicles</td>
+                </tr>
+
+                <tr>
+                    <th>GET</th>
+                    <td>/comments/1</td>
+                </tr>
+
+                <tr>
+                    <th>GET</th>
+                    <td>/contacts/1</td>
+                </tr>
+
+                <tr>
+                    <th>GET</th>
+                    <td>/products/1</td>
+                </tr>
+
+                <tr>
+                    <th>GET</th>
+                    <td>/vehicles/1</td>
+                </tr>
+
+                <tr>
+                    <th>POST</th>
+                    <td>/comments</td>
+                </tr>
+
+                <tr>
+                    <th>POST</th>
+                    <td>/contacts</td>
+                </tr>
+
+                <tr>
+                    <th>POST</th>
+                    <td>/products</td>
+                </tr>
+
+                <tr>
+                    <th>POST</th>
+                    <td>/vehicles</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </section>
+
+</body>
+
+</html>

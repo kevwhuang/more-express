@@ -1,0 +1,27 @@
+{
+    "name": "more-express",
+    "version": "1.0.0",
+    "description": "",
+    "author": "Kevin Huang",
+    "license": "MIT",
+    "main": "src/index.mjs",
+    "scripts": {
+        "start": "node src/index.mjs"
+    },
+    "homepage": "https://github.com/kevwhuang/more-express#readme",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/kevwhuang/more-express.git"
+    },
+    "bugs": {
+        "url": "https://github.com/kevwhuang/more-express/issues"
+    },
+    "dependencies": {
+        "cors": "*",
+        "express": "*"
+    },
+    "devDependencies": {
+        "eslint-config-airbnb-base": "*",
+        "nodemon": "*"
+    }
+}
